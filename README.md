@@ -5,6 +5,8 @@
 - Code First Yaklaşımı
 - Asenkron programlama
 - Dependency Injection kullanarak bileşen tabanlı geliştirme
+- Caching İşlemleri
+- Redis Kullanımı
 - Cross-Origin Resource Sharing (CORS) politikalarının yönetimi
 - Entity Framework ile veritabanı işlemleri
 - Repository Design Pattern kullanımı
