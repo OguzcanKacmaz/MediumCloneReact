@@ -2,23 +2,24 @@
 .NET Core Web API ile Backend kısmını React ile Frontend kısmını geliştirmek üzere başlamış olduğum kullanıcıların kendi blog-makale yazılarını yazabilecekleri bir çalışma projesi.
 
 - JWT (JSON Web Token) tabanlı kimlik doğrulama ve yetkilendirme işlemleri
-- Code First Yaklaşımı
+- Code First yaklaşımı
 - Asenkron programlama
 - Dependency Injection kullanarak bileşen tabanlı geliştirme
-- Caching İşlemleri
-- Redis Kullanımı
+- Caching işlemleri
+- Redis kullanımı
 - Cross-Origin Resource Sharing (CORS) politikalarının yönetimi
 - Entity Framework ile veritabanı işlemleri
-- Repository Design Pattern kullanımı
-- UnitOfWork Design Pattern kullanımı
-- Option Design Pattern kullanımı
-- N-Tier Architecture
-- Giriş doğrulama ve veri doğrulama için Validation
+- Repository design pattern kullanımı
+- UnitOfWork design pattern kullanımı
+- Option design pattern kullanımı
+- N-Tier architecture
+- Giriş doğrulama ve veri doğrulama için FluentValidation kütüphanesi kullanımı
+- Mapping işlemleri için AutoMapper kütüphanesi kullanımı
 - RESTful API tasarımı ve geliştirilmesi
 - Rol tabanlı yetkilendirme işlemleri
 - Temel CRUD (Create, Read, Update, Delete) işlemlerinin gerçekleştirilmesi
-- React-Router-Dom Kullanımı
-- UseState-UseEffect Kullanımı
-- Context Api Kullanımı
+- React-Router-Dom kullanımı
+- UseState-UseEffect kullanımı
+- Context Api kullanımı
 
 ### Projeye Yeni Başlanmıştır. Yukarıda yazılan maddeler projede kullanılacak teknolojilerdir.
