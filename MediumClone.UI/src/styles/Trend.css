@@ -1,0 +1,118 @@
+.trend-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 350px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.trend-container {
+    width: 65%;
+    margin: 40px 0 0 18px;
+}
+
+.trend-content-title {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+
+}
+
+.trend-content-title svg {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px 5px 5px 0;
+    margin-right: 20px;
+}
+
+.trend-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.trend-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.trend-item {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.trend-index {
+    color: #F2F2F2;
+    font-size: 32px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.trend-card-title {
+    display: flex;
+    align-items: baseline;
+}
+
+.profile-photo {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-info span {
+    color: #242424;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.post-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 4px;
+}
+
+.post-desc a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.createdDate {
+    font-size: 13px;
+    color: gray;
+    align-self: flex-start;
+    margin-left: 56px;
+    margin-top: 10px;
+}
+
+.userName-popup {
+    position: absolute;
+    width: 300px;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hidden-popup {
+    display: none;
+}
+
+.post-desc {
+    width: 283px;
+}

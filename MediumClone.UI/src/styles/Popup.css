@@ -1,0 +1,38 @@
+.popup-photo {
+    width: 32px;
+    margin-right: 10px;
+}
+
+.popup-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-info span {
+    font-size: 24px;
+}
+
+.userName-popup>p {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding-bottom: 15px;
+}
+
+.popup-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-footer p {
+    font-size: 13px;
+    color: gray;
+}
+
+.popup-footer button {
+    background-color: green;
+    border-radius: 20px;
+    padding: 4px 8px;
+    color: white;
+    border: none;
+}
