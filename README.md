@@ -1,6 +1,6 @@
 # C-Masters
 
-##### Projeye Yeni Başlanmıştır. Yukarıda yazılan maddeler projede kullanılacak teknolojilerdir.
+#### Projeye Yeni Başlanmıştır. Aşağıda yazılan maddeler projede kullanılacak/kullanılan teknolojilerdir.
 
 ## Projenin Tanımı
 .NET Core 6 Web API ile Backend kısmını React ile Frontend kısmını geliştirmek üzere başlamış olduğum kullanıcıların kendi blog-makale yazılarını yazabilecekleri bir çalışma projesi.
