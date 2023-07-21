@@ -1,5 +1,7 @@
 # C-Masters
 
+##### Projeye Yeni Başlanmıştır. Yukarıda yazılan maddeler projede kullanılacak teknolojilerdir.
+
 ## Projenin Tanımı
 .NET Core 6 Web API ile Backend kısmını React ile Frontend kısmını geliştirmek üzere başlamış olduğum kullanıcıların kendi blog-makale yazılarını yazabilecekleri bir çalışma projesi.
 
@@ -23,5 +25,3 @@
 - React-Router-Dom kullanımı
 - UseState-UseEffect kullanımı
 - Context Api kullanımı
-
-### Projeye Yeni Başlanmıştır. Yukarıda yazılan maddeler projede kullanılacak teknolojilerdir.
