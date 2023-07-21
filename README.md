@@ -3,7 +3,7 @@
 #### Projeye Yeni Başlanmıştır. Aşağıda yazılan maddeler projede kullanılacak/kullanılan teknolojilerdir.
 
 ## Projenin Tanımı
-.NET Core 6 Web API ile Backend kısmını React ile Frontend kısmını geliştirmek üzere başlamış olduğum kullanıcıların kendi blog-makale yazılarını yazabilecekleri bir çalışma projesi.
+.NET Core 6 Web API ile Backend kısmını React ile Frontend kısmını geliştirmek üzere başlamış olduğum medium.com sitesi clone projesi.
 
 - JWT (JSON Web Token) tabanlı kimlik doğrulama ve yetkilendirme işlemleri
 - Code First yaklaşımı
