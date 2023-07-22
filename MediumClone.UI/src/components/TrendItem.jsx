@@ -40,7 +40,7 @@ export default function TrendItem({ post, index }) {
           {`${Months[new Date(post.postCreatedTime).getMonth()]} ${new Date(
             post.postCreatedTime
           ).getDate()}`}{" "}
-          - 5 min read
+          · 5 min read
         </span>
       </div>
     </>

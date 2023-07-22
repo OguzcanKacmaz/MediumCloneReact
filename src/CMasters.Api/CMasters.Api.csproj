@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CMasters.Business\CMasters.Business.csproj" />
+    <ProjectReference Include="..\CMasters.Cache\CMasters.Cache.csproj" />
     <ProjectReference Include="..\CMasters.DataAccess\CMasters.DataAccess.csproj" />
     <ProjectReference Include="..\CMasters.SharedLibrary\CMasters.SharedLibrary.csproj" />
   </ItemGroup>

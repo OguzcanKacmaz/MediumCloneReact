@@ -32,7 +32,7 @@ public class AuthenticationService : IAuthenticationService
         if(!result)
             return Response<TokenDto>.Fail(new ErrorDto("Email veya Şifre Yanlış", true), StatusCodes.Status400BadRequest, true);
         var token = await _tokenService.CreateTokenAsync(user);
-        var userRefreshToken = await _userRefreshTokenRepository.FindByIdAsync(x => x.UserId == user.Id);
+        var userRefreshToken = await _userRefreshTokenRepository.FindAsync(x => x.UserId == user.Id);
         if (userRefreshToken is null)
             await _userRefreshTokenRepository.AddAsync(new UserRefreshToken() { UserId = user.Id,Code=token.RefreshToken,Expiration=token.RefreshTokenExpiration });
         else

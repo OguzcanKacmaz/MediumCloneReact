@@ -15,9 +15,10 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         _context = context;
         _dbSet=_context.Set<TEntity>();
     }
-    public async Task AddAsync(TEntity entity)
+    public async Task<TEntity> AddAsync(TEntity entity)
     {
         await _dbSet.AddAsync(entity);
+        return entity;
     }
 
     public async Task DeleteAsync(string id)
@@ -26,7 +27,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         await Task.FromResult(_dbSet.Remove(entity));
     }
 
-    public async Task<TEntity> FindByIdAsync(Expression<Func<TEntity, bool>> expression)
+    public async Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> expression)
     {
         return await _dbSet.FirstOrDefaultAsync(expression);
     }

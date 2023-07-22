@@ -1,17 +1,18 @@
 import React from "react";
 import "../styles/Navbar.css";
-import CreateIcon from "@mui/icons-material/Create";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/medium.png";
 
-export default function Navbar() {
+export default function Navbar({ clasName }) {
   return (
     <>
-      <nav>
+      <nav className={clasName}>
         <div className="main-nav">
           <div className="nav-logo">
-            <img src={Logo} alt="" />
-            <span>Medium</span>
+            <Link to="/" style={{ textDecoration: "none", display: "flex" }}>
+              <img src={Logo} alt="" />
+              <span>Medium</span>
+            </Link>
           </div>
           <div className="nav-items">
             <NavLink to="/">Our story</NavLink>

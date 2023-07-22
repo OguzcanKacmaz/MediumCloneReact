@@ -10,6 +10,6 @@ public class Post:BaseEntity
     public int LikeCount { get; set; }
     public int ViewCount { get; set; }
     public string AppUserId { get; set; }
-    public ICollection<Category> Categories { get; set; }
+    public ICollection<Category> Categories { get; set; }=new List<Category>();
     public AppUser AppUser { get; set; }
 }

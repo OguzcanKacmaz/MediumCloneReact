@@ -17,7 +17,9 @@ public static class ServiceDI
         services.AddScoped<ISecurityKeyService, SecurityKeyService>();
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<ICategoryService, CategoryService>();
         services.AddScoped<IAuthenticationService, AuthenticationService>();
+        services.AddScoped<IPostService, PostService>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddAutoMapper(typeof(DtoMapper));
 

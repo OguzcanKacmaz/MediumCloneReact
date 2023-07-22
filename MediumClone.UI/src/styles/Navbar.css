@@ -10,6 +10,7 @@ nav {
     right: 0;
     left: 0;
     z-index: 999;
+    transition: background-color 0.9s ease;
 }
 
 .main-nav {
@@ -71,4 +72,13 @@ nav {
     font-family: sans-serif;
     margin: 0;
 
+}
+
+.scrolled {
+    background-color: white;
+    transition: all .9s ease;
+}
+
+.scrolled .main-nav .nav-items a:last-child {
+    background-color: green;
 }

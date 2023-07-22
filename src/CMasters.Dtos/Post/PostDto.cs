@@ -4,6 +4,7 @@ namespace CMasters.Dtos.Post;
 
 public class PostDto
 {
+    public string Id { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
     public DateTime PostCreatedTime { get; set; }

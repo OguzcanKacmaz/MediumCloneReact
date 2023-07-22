@@ -1,4 +1,5 @@
-﻿using CMasters.Entities.Concrete;
+﻿using CMasters.Dtos.Post;
+using CMasters.Entities.Concrete;
 using System.Linq.Expressions;
 
 namespace CMasters.DataAccess.Abstract;

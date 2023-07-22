@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    height: 185px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-header img {
+    height: 18px;
+    margin-right: 10px;
+}
+
+.card-content-title {
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+}
+
+.card-btn {
+    padding: 10px 16px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 3px 10px 10px;
+}
+
+.card-left {
+    width: 70%;
+    height: 134px;
+}

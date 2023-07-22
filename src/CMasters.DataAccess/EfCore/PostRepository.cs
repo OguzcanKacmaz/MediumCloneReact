@@ -16,6 +16,7 @@ public class PostRepository : GenericRepository<Post>, IPostRepository
         _db = db;
     }
 
+
     public async Task<IEnumerable<Post>> GetPostAndWriterIncluedAsync(Expression<Func<Post, bool>> expression, bool traching = true)
     {
         var posts=await _db.Posts.Include(x=>x.AppUser).Include(x=>x.Categories).Where(expression).ToListAsync();

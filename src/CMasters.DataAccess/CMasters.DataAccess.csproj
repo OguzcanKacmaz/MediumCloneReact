@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CMasters.Cache\CMasters.Cache.csproj" />
+    <ProjectReference Include="..\CMasters.Dtos\CMasters.Dtos.csproj" />
     <ProjectReference Include="..\CMasters.Entities\CMasters.Entities.csproj" />
   </ItemGroup>
 

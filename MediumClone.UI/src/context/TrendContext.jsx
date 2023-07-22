@@ -10,14 +10,20 @@ export default function TrendContextProvider({ children }) {
   const [popupShow, setPopUpShow] = useState(true);
   const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    async function fetchTrendData() {
-      var response = await axios.get(
+  var getTrendSixPost = async () => {
+    try {
+      const { data: trendSixPost } = await axios.get(
         "https://localhost:7272/api/Post/GetTrendSixPost"
       );
-      setTrendPost(response.data);
-    }
-    fetchTrendData();
+      if (trendSixPost.isSuccesfull) {
+        return trendSixPost.data;
+      }
+    } catch (error) {}
+  };
+  useEffect(() => {
+    getTrendSixPost()
+      .then((data) => data && setTrendPost(data))
+      .catch((error) => console.log(error));
   }, []);
   const handleHoverPopUpShow = (event, index) => {
     const element = event.target;

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using CMasters.Business.Extensions;
 using Microsoft.OpenApi.Models;
+using CMasters.Cache.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,8 @@ builder.Services
     .AddDataAccess(builder.Configuration)
     .AddRepositoryDI()
     .AddServices()
-    .AddRepositoryDI();
+    .AddRepositoryDI()
+    .AddRedisService(builder.Configuration);
 
 builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 {
