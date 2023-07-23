@@ -1,15 +1,17 @@
 import { Form, Formik } from "formik";
-import React from "react";
+import React, { useContext } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./CustomButton";
 import { registerSchema } from "../schema/Index";
+import { UserContext } from "../context/UserContext";
 
 export default function RegisterForm() {
+  const { registerFromSubmit } = useContext(UserContext);
   const onclick = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
       setSubmitting(false);
       resetForm();
-      userGetToken(values);
+      registerFromSubmit(values);
     }, 1000);
   };
   return (

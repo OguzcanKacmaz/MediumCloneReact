@@ -21,18 +21,18 @@ const style = {
   p: 4,
 };
 export default function Register() {
-  const { openRegister, handleClose, loginError } =
+  const { openRegister, handleCloseRegister, loginError } =
     React.useContext(UserContext);
   return (
     <div>
       <Modal
         open={openRegister}
-        onClose={handleClose}
+        onClose={handleCloseRegister}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CloseIcon onClick={handleClose} />
+          <CloseIcon onClick={handleCloseRegister} />
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Register
           </Typography>

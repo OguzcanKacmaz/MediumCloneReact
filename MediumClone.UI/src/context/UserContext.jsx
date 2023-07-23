@@ -40,6 +40,11 @@ function UserProvider({ children }) {
       setLoginError(response.response.data.error.errors);
     }
   };
+  const registerFromSubmit = (values) => {
+    console.log(values);
+    //api kısmında kayıt olana rol ataması yap
+    //veriyi gönder
+  };
   const userCookieDelete = () => {
     setCookies("accessToken", "", { maxAge: 0 });
     setCookies("accessTokenExpiration", "", { maxAge: 0 });
@@ -63,6 +68,7 @@ function UserProvider({ children }) {
           handleOpen,
           handleClose,
           open,
+          registerFromSubmit,
         }}
       >
         {children}
