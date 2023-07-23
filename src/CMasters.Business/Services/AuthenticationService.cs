@@ -27,10 +27,10 @@ public class AuthenticationService : IAuthenticationService
     {
         var user=await _userManager.FindByEmailAsync(loginDto.Email);
         if (user is null)
-            return Response<TokenDto>.Fail(new ErrorDto("Email veya Şifre Yanlış",true), StatusCodes.Status400BadRequest, true);
+            return Response<TokenDto>.Fail(new ErrorDto("Email or Password is Incorrect", true), StatusCodes.Status400BadRequest, false);
         var result=await _userManager.CheckPasswordAsync(user, loginDto.Password);
         if(!result)
-            return Response<TokenDto>.Fail(new ErrorDto("Email veya Şifre Yanlış", true), StatusCodes.Status400BadRequest, true);
+            return Response<TokenDto>.Fail(new ErrorDto("Email or Password is Incorrect", true), StatusCodes.Status400BadRequest, false);
         var token = await _tokenService.CreateTokenAsync(user);
         var userRefreshToken = await _userRefreshTokenRepository.FindAsync(x => x.UserId == user.Id);
         if (userRefreshToken is null)

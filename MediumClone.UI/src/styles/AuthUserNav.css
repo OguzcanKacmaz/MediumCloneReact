@@ -1,0 +1,122 @@
+.nav {
+    width: 100%;
+    height: 55px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav img {
+    width: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left input {
+    background-color: rgb(243, 243, 243);
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.nav-left svg {
+    position: absolute;
+    left: 120px;
+    color: lightgray;
+}
+
+.nav-left input::placeholder {
+    padding-left: 25px;
+}
+
+.write {
+    display: flex;
+    margin-right: 30px;
+    color: gray;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right img {
+    width: 30px;
+    margin: 0 0 0 30px;
+}
+
+.nav-right svg {
+    color: gray;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profileSettings {
+    position: absolute;
+    border: 1px solid rgb(236, 236, 236);
+    top: 50px;
+    width: 270px;
+    height: 650px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+    overflow-y: auto;
+    z-index: 999;
+    background-color: white;
+}
+
+.profile-post-settings {
+    width: 100%;
+    padding: 16px 0;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.profile-btn {
+    width: 100%;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    color: rgb(107, 107, 107);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-btn svg {
+    margin-right: 20px;
+}
+
+.profile-btn :hover {
+    color: black
+}
+
+.profile-post-settings a {
+    padding: 6px 24px;
+    width: 100%;
+    display: block;
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.profileSettings .profile-post-settings:last-child {
+    border-bottom: none;
+}

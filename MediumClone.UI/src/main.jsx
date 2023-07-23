@@ -4,11 +4,14 @@ import App from "./App.jsx";
 import "./styles/index.css";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./context/UserContext.jsx";
+import { CookiesProvider } from "react-cookie";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <UserProvider>
+  <CookiesProvider>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </BrowserRouter>
-  </UserProvider>
+  </CookiesProvider>
 );
