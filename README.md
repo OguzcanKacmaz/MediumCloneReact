@@ -15,7 +15,7 @@ Ayrıca, projenin performansını artırmak ve kullanıcı deneyimini geliştirm
 
 ### Güvenlik - JSON Web Token (JWT)
 
-Kullanıcı kimlik doğrulama ve yetkilendirme için JSON Web Token (JWT) kullanarak projenin güvenliğini sağladım. Kullanıcıların API'larımıza güvenli bir şekilde erişmelerini sağlayarak, yetkisiz erişimi engelledim. Ayrıca, kullanıcı oturumlarını yönetmek ve güvenliği artırmak için JWT'leri kullanım süreleri belirledim.
+Kullanıcı kimlik doğrulama ve yetkilendirme için JSON Web Token (JWT) kullanarak projenin güvenliğini sağladım. Kullanıcıların API'lara güvenli bir şekilde erişmelerini sağlayarak, yetkisiz erişimi engelledim. Ayrıca, kullanıcı oturumlarını yönetmek ve güvenliği artırmak için JWT'leri kullanım süreleri belirledim.
 
 ### Frontend Geliştirme - React
 
@@ -48,9 +48,9 @@ Projemin kullanıcı arayüzü için modern ve etkileyici bir deneyim sağlamak 
 - useState - useContext-useEffect gibi hookların kullanımı
 
 ### Öğrendiklerim ve Sonuç
-Bu projeyi geliştirirken birçok yeni teknoloji ve kavramla tanıştım. Özellikle React'in esnekliği ve Redis'in projelerde ki performans arttırıcı etkisini gözlemledim. JWT kullanarak güvenlik konusundaki bilgilerimi artırdım ve SPA mimarisini anlamak, frontend geliştirmeyi daha keyifli hale getirdi.
+Bu projeyi geliştirirken birçok yeni teknoloji ve kavramla tanıştım. Özellikle React'in esnekliği ve Redis'in projelerde ki performans arttırıcı etkisini gözlemledim. JWT kullanarak güvenlik konusundaki bilgilerimi arttırdım ve SPA mimarisini anlamak, frontend geliştirmeyi daha keyifli hale getirdi.
 
-Sonuç olarak, bu projeyi geliştirerek hem backend hem de frontend alanında bilgilerimi pekiştirdim. Bir konsepti anlamak ve uygulamak, teoriden pratiğe geçişi sağlamanın en etkili yoludur.
+Sonuç olarak, bu projeyi geliştirerek hem backend hem de frontend alanında bilgilerimi pekiştirdim.
 
 Projemi geliştirirken karşılaştığım zorluklar beni daha iyi bir geliştirici olmaya teşvik etti ve bu süreçte sabır, azim ve öğrenmeye olan inancımı pekiştirdi. Kendimi geliştirmeye devam edeceğim ve gelecekte daha karmaşık ve inovatif projeler geliştirmek için bu deneyimleri kullanacağım.
 
