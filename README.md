@@ -26,3 +26,4 @@
 - Bootstrap-Icon kullanımı
 - Sunucu tarafından gelen Json Web Token'ın decode işlemi için jwt-decode kütüphanesi kullanımı
 - Verileri cookie de saklamak için react-cookie kütüphanesi kullanımı
+- useState - useContext-useEffect gibi hookların kullanımı
