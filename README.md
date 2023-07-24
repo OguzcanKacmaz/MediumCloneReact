@@ -57,7 +57,7 @@ Projemi geliştirirken karşılaştığım zorluklar beni daha iyi bir geliştir
 Sağlam adımlar ve kodlamalar dilerim!
 
 
-#### Proje Resimleri
+### Proje Resimleri
 <p align="center">
   <img width="1000" height="700" src="https://i.hizliresim.com/hxa3pfn.jpg">
 </p>
