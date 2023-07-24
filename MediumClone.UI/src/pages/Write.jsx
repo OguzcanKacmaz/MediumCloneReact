@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import WriteNavbar from "../components/WriteNavbar";
 import "../styles/WriteContent.css";
 import { PostContext } from "../context/PostContext";
@@ -9,9 +9,12 @@ export default function Write() {
     handleContentFocus,
     showTitle,
     showContent,
-    setTitle,
-    setContent,
+    titleRow,
+    contentRow,
+    handleTitleChange,
+    handleContentChange,
   } = useContext(PostContext);
+
   return (
     <>
       <div>
@@ -19,19 +22,19 @@ export default function Write() {
         <div className="write-content">
           <form>
             <textarea
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={handleTitleChange}
               onClick={handleTitleFocus}
               cols="35"
-              rows="1"
+              rows={titleRow}
               placeholder="Title"
               className="title"
             ></textarea>
 
             <textarea
-              onChange={(e) => setContent(e.target.value)}
+              onChange={handleContentChange}
               onClick={handleContentFocus}
               cols="43"
-              rows="3"
+              rows={contentRow}
               placeholder="Tell your story..."
               className="content"
             ></textarea>

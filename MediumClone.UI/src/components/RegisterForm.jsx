@@ -36,16 +36,16 @@ export default function RegisterForm() {
               name="Email"
             />
             <CustomInput
-              label="Email"
-              placeholder="Email"
-              type="text"
-              name="Email"
-            />
-            <CustomInput
-              label="FullName"
-              placeholder="FullName"
+              label="Full Name"
+              placeholder="Full Name"
               type="text"
               name="FullName"
+            />
+            <CustomInput
+              label="Password"
+              placeholder="Password"
+              type="password"
+              name="Password"
             />
             <CustomInput
               label="Confirm Password"

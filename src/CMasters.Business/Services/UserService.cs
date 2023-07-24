@@ -23,7 +23,7 @@ public class UserService : IUserService
         var user =await _userManager.FindByEmailAsync(registerDto.Email);
         if (user is not null)
             return Response<AppUserDto>.Fail(new ErrorDto("Email address is exist", false), StatusCodes.Status400BadRequest, true);
-        var newUser=new AppUser() { Email = registerDto.Email,UserName=registerDto.Email };
+        var newUser=new AppUser() { Email = registerDto.Email,UserName=registerDto.Email,FullName=registerDto.FullName };
        var result= await _userManager.CreateAsync(newUser,registerDto.Password);
         if (!result.Succeeded)
         {

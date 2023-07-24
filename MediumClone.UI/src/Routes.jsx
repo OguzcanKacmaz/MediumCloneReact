@@ -5,24 +5,38 @@ import { UserContext } from "./context/UserContext";
 import AuthUserPage from "./pages/AuthUserPage";
 import Write from "./pages/Write";
 import { PostContextProvider } from "./context/PostContext";
+import AuthForyou from "./pages/AuthForyou";
+import AuthFollowing from "./pages/AuthFollowing";
+import { MainContentProvider } from "./context/MainContentContext";
 
 export default function SideRoutes() {
   const { cookies } = useContext(UserContext);
   return (
     <Routes>
-      <Route
-        path="/"
-        element={cookies.userAuth ? <AuthUserPage /> : <Home />}
-      />
-      {cookies.userAuth && (
-        <Route
-          path="/write"
-          element={
-            <PostContextProvider>
-              <Write />
-            </PostContextProvider>
-          }
-        />
+      {cookies.userAuth ? (
+        <>
+          <Route
+            path="/write"
+            element={
+              <PostContextProvider>
+                <Write />
+              </PostContextProvider>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <MainContentProvider>
+                <AuthUserPage />
+              </MainContentProvider>
+            }
+          >
+            <Route path="/" element={<AuthForyou />} />
+            <Route path="/following" element={<AuthFollowing />} />
+          </Route>
+        </>
+      ) : (
+        <Route path="/" element={<Home />} />
       )}
     </Routes>
   );

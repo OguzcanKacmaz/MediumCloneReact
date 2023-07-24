@@ -62,7 +62,6 @@ function UserProvider({ children }) {
       );
       setLoginError(null);
       setRegisterMessage("Membership successful");
-      console.log(response);
       return response;
     } catch (response) {
       setLoginError(response.response.data.error.errors);

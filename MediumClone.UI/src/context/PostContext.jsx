@@ -9,6 +9,8 @@ function PostContextProvider({ children }) {
   const [showContent, setShowContent] = useState(false);
   const [title, setTitle] = useState(null);
   const [content, setContent] = useState(null);
+  const [titleRow, setTitleRow] = useState(1);
+  const [contentRow, setContentRow] = useState(1);
 
   const handleFormSubmit = async (accessToken) => {
     const postData = {
@@ -33,7 +35,20 @@ function PostContextProvider({ children }) {
       console.log(response);
     }
   };
+  const handleRowCalculate = (e, colCount, setRowFunc) => {
+    const rowCount = Math.ceil(e.target.value.length / colCount);
+    setRowFunc(rowCount === 0 ? 1 : rowCount);
+  };
 
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
+    handleRowCalculate(e, 35, setTitleRow); // 35 sütun sayısı
+  };
+
+  const handleContentChange = (e) => {
+    setContent(e.target.value);
+    handleRowCalculate(e, 43, setContentRow); // 43 sütun sayısı
+  };
   const handleTitleFocus = (event) => {
     setShowTitle(true);
     setShowContent(false);
@@ -52,6 +67,10 @@ function PostContextProvider({ children }) {
         showTitle,
         showContent,
         handleFormSubmit,
+        handleTitleChange,
+        handleContentChange,
+        titleRow,
+        contentRow,
       }}
     >
       {children}
