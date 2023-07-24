@@ -24,5 +24,5 @@
 - Giriş ve kayıt işlemlerinde form verilerini doğrulamak için Formik ve Yup kütüphanesi kullanımı
 - Material UI kullanımı
 - Bootstrap-Icon kullanımı
-- Sunucu tarafından gelen Json Web Token'ın decode işlemi için jwt-decoder kütüphanesi kullanımı
+- Sunucu tarafından gelen Json Web Token'ın decode işlemi için jwt-decode kütüphanesi kullanımı
 - Verileri cookie de saklamak için react-cookie kütüphanesi kullanımı
