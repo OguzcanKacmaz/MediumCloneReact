@@ -1,7 +1,7 @@
 # MediumCloneReact
 
 ## Projenin Tanımı
-.NET Core 6 Web API ile Backend kısmını, React ile Frontend kısmını geliştirmek üzere başlamış olduğum Medium.com sitesi clone projesi.
+.NET Core 6 Web API ile Backend kısmını, React ile Frontend kısmını geliştirmiş olduğum Medium.com sitesi clone projesi.
 
 - JWT (JSON Web Token) tabanlı kimlik doğrulama ve yetkilendirme işlemleri
 - Code First yaklaşımı
