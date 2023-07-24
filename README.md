@@ -48,13 +48,11 @@ Projemin kullanıcı arayüzü için modern ve etkileyici bir deneyim sağlamak 
 - useState - useContext-useEffect gibi hookların kullanımı
 
 ### Öğrendiklerim ve Sonuç
-Bu projeyi geliştirirken birçok yeni teknoloji ve kavramla tanıştım. Özellikle ASP .NET 6'nın gücü, React'in esnekliği ve Redis'in performans artırıcı etkisi beni etkiledi. JWT kullanarak güvenlik konusundaki bilgilerimi artırdım ve SPA mimarisini anlamak, frontend geliştirmeyi daha keyifli hale getirdi.
+Bu projeyi geliştirirken birçok yeni teknoloji ve kavramla tanıştım. Özellikle React'in esnekliği ve Redis'in projelerde ki performans arttırıcı etkisini gözlemledim. JWT kullanarak güvenlik konusundaki bilgilerimi artırdım ve SPA mimarisini anlamak, frontend geliştirmeyi daha keyifli hale getirdi.
 
-Sonuç olarak, bu projeyi geliştirerek hem backend hem de frontend alanında bilgilerimi pekiştirdim. Bir konsepti anlamak ve uygulamak, teoriden pratiğe geçişi sağlamanın en etkili yoludur. Medium.com klonu projem, hem yeni başlayanlar hem de deneyimli geliştiriciler için faydalı bir öğrenme deneyimi sunabilir.
+Sonuç olarak, bu projeyi geliştirerek hem backend hem de frontend alanında bilgilerimi pekiştirdim. Bir konsepti anlamak ve uygulamak, teoriden pratiğe geçişi sağlamanın en etkili yoludur.
 
 Projemi geliştirirken karşılaştığım zorluklar beni daha iyi bir geliştirici olmaya teşvik etti ve bu süreçte sabır, azim ve öğrenmeye olan inancımı pekiştirdi. Kendimi geliştirmeye devam edeceğim ve gelecekte daha karmaşık ve inovatif projeler geliştirmek için bu deneyimleri kullanacağım.
-
-Siz de yeni teknolojileri öğrenmek ve kendi projelerinizi geliştirmek için cesaretli adımlar atın! Yeni bilgiler edinmek, sınırlarınızı genişletmek ve hayal gücünüzü gerçeğe dönüştürmek için teknoloji dünyasının sonsuz potansiyelinden yararlanın.
 
 Sağlam adımlar ve kodlamalar dilerim!
 
