@@ -20,7 +20,10 @@ function UserProvider({ children }) {
     setLoginError(null);
     setRegisterMessage(null);
   };
-  const handleCloseModal = () => setOpenModal(false);
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setOpenRegister(false);
+  };
 
   const handleOpenregister = () => {
     setOpenRegister((prev) => !prev);

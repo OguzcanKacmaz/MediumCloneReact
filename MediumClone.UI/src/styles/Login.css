@@ -18,9 +18,12 @@
 }
 
 .MuiBox-root svg {
-    align-self: flex-end;
     margin-bottom: 30px;
     cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    top: 30px;
+    left: 650px;
 }
 
 .MuiBox-root p {
