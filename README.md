@@ -56,7 +56,7 @@
   <img width="1000" height="700" src="https://i.hizliresim.com/5srbh1c.jpg">
 </p>
 <p align="center">
-  <img width="1000" height="700" src="https://www.hizliresim.com/gpjh5eh">
+  <img width="1000" height="700" src="https://www.hizliresim.com/gpjh5eh.jpg">
 </p>
 <p align="center">
   <img width="1000" height="700" src="https://i.hizliresim.com/lvmh9zc.jpg">
