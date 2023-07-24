@@ -22,7 +22,7 @@ public class UserService : IUserService
     {
         var user =await _userManager.FindByEmailAsync(registerDto.Email);
         if (user is not null)
-            return Response<AppUserDto>.Fail(new ErrorDto("Email Adresi Kayıtlıdır", true), StatusCodes.Status400BadRequest, true);
+            return Response<AppUserDto>.Fail(new ErrorDto("Email address is exist", false), StatusCodes.Status400BadRequest, true);
         var newUser=new AppUser() { Email = registerDto.Email,UserName=registerDto.Email };
        var result= await _userManager.CreateAsync(newUser,registerDto.Password);
         if (!result.Succeeded)
@@ -30,6 +30,8 @@ public class UserService : IUserService
             var errors = result.Errors.Select(x => x.Description).ToList();
             return Response<AppUserDto>.Fail(new ErrorDto(errors, true), StatusCodes.Status400BadRequest,true);
         }
+        var createdUser=await _userManager.FindByEmailAsync(registerDto?.Email);
+        await _userManager.AddToRoleAsync(createdUser, "writer");
         return Response<AppUserDto>.Success(_mapper.Map<AppUserDto>(user), StatusCodes.Status201Created,true);
     }
     public async Task<Response<AppUserDto>> GetUserByNameAsync(string userName)

@@ -59,7 +59,7 @@ public class TokenService : ITokenService
         var roles = await _userManager.GetRolesAsync(appUser);
         var claims = new List<Claim>() { 
             new Claim(ClaimTypes.NameIdentifier,appUser.Id),
-            new Claim(ClaimTypes.Name,appUser.UserName),
+            new Claim(ClaimTypes.Name,appUser.FullName),
             new Claim(ClaimTypes.Email,appUser.Email),
             new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
         };

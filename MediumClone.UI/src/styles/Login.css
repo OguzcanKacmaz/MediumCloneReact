@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 10px 30px;
     background-color: #fd959e;
     font-weight: 600;
     border-radius: 20px;
@@ -99,4 +99,16 @@ form p a {
 
 form p:last-child {
     width: 70%;
+}
+
+.info {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background-color: #3887c9;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 15px;
 }

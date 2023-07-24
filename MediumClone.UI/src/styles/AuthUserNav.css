@@ -45,6 +45,7 @@ h1 {
     display: flex;
     margin-right: 30px;
     color: gray;
+    cursor: pointer;
 }
 
 .nav-right {
@@ -59,6 +60,10 @@ h1 {
 
 .nav-right svg {
     color: gray;
+}
+
+.nav-right a {
+    text-decoration: none;
 }
 
 .profile {

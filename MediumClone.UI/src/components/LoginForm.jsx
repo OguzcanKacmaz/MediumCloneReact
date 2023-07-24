@@ -1,11 +1,10 @@
 import { Form, Formik } from "formik";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./CustomButton";
 import { Link } from "react-router-dom";
 import { loginSchema } from "../schema/Index";
 import { UserContext } from "../context/UserContext";
-import Register from "../pages/Register";
 
 export default function LoginForm() {
   const { handleOpenregister } = useContext(UserContext);
@@ -13,8 +12,8 @@ export default function LoginForm() {
   const onclick = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
       setSubmitting(false);
-      resetForm();
-      userGetToken(values);
+      var response = userGetToken(values);
+      response ? resetForm() : "";
     }, 1000);
   };
   return (

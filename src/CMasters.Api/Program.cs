@@ -29,7 +29,7 @@ builder.Services
     .AddServices()
     .AddRepositoryDI()
     .AddRedisService(builder.Configuration);
-
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 {
     opt.User.RequireUniqueEmail = true;

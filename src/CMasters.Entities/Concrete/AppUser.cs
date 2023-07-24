@@ -4,6 +4,7 @@ namespace CMasters.Entities.Concrete;
 
 public class AppUser : IdentityUser
 {
+    public string FullName { get; set; }
     public override string UserName
     {
         get => base.UserName;

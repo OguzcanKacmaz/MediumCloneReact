@@ -28,7 +28,7 @@ public class PostRespositoryWithCache : IPostRepository
     {
         var post = await _postRepository.AddAsync(entity);
         if (await _database.KeyExistsAsync(_postKey))
-            await _database.HashSetAsync(_postKey, post.Id, JsonSerializer.Serialize(post));
+            await _database.HashSetAsync(_postKey, post.Id, JsonSerializer.Serialize(MappingPostToPostDto(post)));
         return post;
     }
 

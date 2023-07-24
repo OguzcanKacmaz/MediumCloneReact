@@ -1,25 +1,32 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 const UserContext = React.createContext();
 
 function UserProvider({ children }) {
   const navigate = useNavigate();
   const [userAuth, setUserAuth] = useState(false);
   const [loginError, setLoginError] = useState(null);
+  const [registerMessage, setRegisterMessage] = useState(null);
   const [cookies, setCookies] = useCookies(null);
   const [openRegister, setOpenRegister] = useState(false);
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [openModal, setOpenModal] = React.useState(false);
+  const handleOpenModal = () => {
+    setOpenModal(true);
+    setLoginError(null);
+    setRegisterMessage(null);
+  };
+  const handleCloseModal = () => setOpenModal(false);
 
   const handleOpenregister = () => {
-    setOpenRegister(true);
-    handleClose();
+    setOpenRegister((prev) => !prev);
+    setLoginError(null);
+    setRegisterMessage(null);
   };
-  const handleCloseRegister = () => setOpenRegister(false);
   const userGetToken = async (values) => {
     try {
       const response = await axios.post(
@@ -35,15 +42,31 @@ function UserProvider({ children }) {
       setUserAuth(true);
       setCookies("userAuth", !userAuth);
       setCookies("userEmail", values.Email);
+      var decodedToken = jwt_decode(response.data.data.accessToken);
+      const name =
+        decodedToken?.[
+          "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"
+        ];
+      setCookies("fullName", name);
       navigate("/");
+      return response;
     } catch (response) {
       setLoginError(response.response.data.error.errors);
     }
   };
-  const registerFromSubmit = (values) => {
-    console.log(values);
-    //api kısmında kayıt olana rol ataması yap
-    //veriyi gönder
+  const registerFormSubmit = async (values) => {
+    try {
+      const response = await axios.post(
+        "https://localhost:7272/api/Register",
+        values
+      );
+      setLoginError(null);
+      setRegisterMessage("Membership successful");
+      console.log(response);
+      return response;
+    } catch (response) {
+      setLoginError(response.response.data.error.errors);
+    }
   };
   const userCookieDelete = () => {
     setCookies("accessToken", "", { maxAge: 0 });
@@ -51,7 +74,7 @@ function UserProvider({ children }) {
     setCookies("userAuth", "", { maxAge: 0 });
     setCookies("userEmail", "", { maxAge: 0 });
     setUserAuth(false);
-    handleClose();
+    handleCloseModal();
   };
   return (
     <>
@@ -64,11 +87,11 @@ function UserProvider({ children }) {
           userCookieDelete,
           openRegister,
           handleOpenregister,
-          handleCloseRegister,
-          handleOpen,
-          handleClose,
-          open,
-          registerFromSubmit,
+          handleOpenModal,
+          handleCloseModal,
+          openModal,
+          registerFormSubmit,
+          registerMessage,
         }}
       >
         {children}

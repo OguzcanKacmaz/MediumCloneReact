@@ -7,4 +7,5 @@ public interface IPostService
 {
     public Task<Response<List<PostDto>>> GetTrendSixPost();
     public Task<Response<List<PostDto>>> GetAllPost();
+    public Task<Response<NoDataDto>> CreatePostAsync(CreatePostDto createPostDto);
 }

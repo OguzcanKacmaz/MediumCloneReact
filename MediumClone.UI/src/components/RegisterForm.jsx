@@ -4,14 +4,15 @@ import CustomInput from "./CustomInput";
 import CustomButton from "./CustomButton";
 import { registerSchema } from "../schema/Index";
 import { UserContext } from "../context/UserContext";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm() {
-  const { registerFromSubmit } = useContext(UserContext);
+  const { registerFormSubmit, handleOpenregister } = useContext(UserContext);
   const onclick = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
       setSubmitting(false);
       resetForm();
-      registerFromSubmit(values);
+      registerFormSubmit(values);
     }, 1000);
   };
   return (
@@ -21,6 +22,7 @@ export default function RegisterForm() {
           Email: "",
           Password: "",
           ConfirmPassword: "",
+          FullName: "",
         }}
         onSubmit={onclick}
         validationSchema={registerSchema}
@@ -34,10 +36,16 @@ export default function RegisterForm() {
               name="Email"
             />
             <CustomInput
-              label="Password"
-              placeholder="Password"
-              type="password"
-              name="Password"
+              label="Email"
+              placeholder="Email"
+              type="text"
+              name="Email"
+            />
+            <CustomInput
+              label="FullName"
+              placeholder="FullName"
+              type="text"
+              name="FullName"
             />
             <CustomInput
               label="Confirm Password"
@@ -46,10 +54,18 @@ export default function RegisterForm() {
               name="ConfirmPassword"
             />
             <CustomButton
-              text="Register"
+              text="Sign up"
               type="submit"
               disabled={isSubmitting}
             />
+            <Link onClick={handleOpenregister}>
+              Already have an account? <span>Sign in</span>
+            </Link>
+            <p>
+              Click “Sign Up” to agree to Medium’s <Link>Terms of Service</Link>
+              and acknowledge that Medium’s <Link>Privacy Policy</Link> applies
+              to you.
+            </p>
           </Form>
         )}
       </Formik>

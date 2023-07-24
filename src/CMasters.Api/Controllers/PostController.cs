@@ -2,6 +2,7 @@
 using CMasters.DataAccess.Abstract;
 using CMasters.Dtos.Post;
 using CMasters.Entities.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
@@ -29,6 +30,13 @@ namespace CMasters.Api.Controllers
         {
             var trendPost = await _postService.GetAllPost();
             return ActionResultInstance(trendPost);
+        }
+        [Authorize(Roles ="writer")]
+        [HttpPost]
+        public async Task<IActionResult> CreatePost(CreatePostDto createPostDto)
+        {
+            var response=await _postService.CreatePostAsync(createPostDto);
+            return ActionResultInstance(response);
         }
     }
 }

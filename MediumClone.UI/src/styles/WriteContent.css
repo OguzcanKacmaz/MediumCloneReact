@@ -1,0 +1,76 @@
+.write-content {
+    width: 100%;
+    height: 100vh;
+}
+
+.write-content .title {
+    border: none;
+    outline: none;
+    font-size: 34px;
+    resize: none;
+    overflow: hidden;
+    height: fit-content;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+}
+
+.write-content .content {
+    border: none;
+    outline: none;
+    font-size: 28px;
+    resize: none;
+    overflow: hidden;
+    height: fit-content;
+    padding-left: 13px;
+    margin-left: 10px;
+
+}
+
+.write-content textarea:first-child {
+    margin-top: 50px;
+}
+
+.write-content textarea.content::placeholder {
+    font-size: 22px;
+    color: #b3b3b1;
+}
+
+.write-content textarea.title::placeholder {
+    font-size: 35px;
+    color: #b3b3b1;
+}
+
+.plusBtn-title>button {
+    background-color: transparent;
+    border: 1px solid black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    position: absolute;
+    top: 123px;
+    left: 560px;
+}
+
+.plusBtn-content>button {
+    background-color: transparent;
+    border: 1px solid black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    position: absolute;
+    top: 175px;
+    left: 560px;
+}
+
+.content-group {
+    display: flex;
+    margin-top: 55px;
+}
+
+.write-content .title:focus {
+    border-left: 1px solid lightgray;
+}
