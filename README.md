@@ -3,6 +3,7 @@
 ## Projenin Tanımı
 .NET Core 6 Web API ile Backend kısmını, React ile Frontend kısmını geliştirmiş olduğum Medium.com sitesi clone projesi.
 
+### Kullanılan Teknoloji ve Kütüphaneler
 - JWT (JSON Web Token) tabanlı kimlik doğrulama ve yetkilendirme işlemleri
 - Code First yaklaşımı
 - Asenkron programlama
